@@ -1,0 +1,85 @@
+﻿<Window x:Class="IBSR_Manager_WPF.Scientist.WindowMenuSci"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IBSR_Manager_WPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="WindowMenuSci" Height="800" Width="1000">
+    <Grid Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="215*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="535*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Background="#FF4D68B0">
+            <materialDesign:PackIcon Kind="Database" Height="50" Width="50" Foreground="White" Margin="5, 0, 0, 0"/>
+        </Grid>
+        
+        <Grid Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="0" Background="#FF4D68B0" MouseDown="Grid_MouseDown">
+            <StackPanel Grid.Column="0" x:Name="TopMenuStack" Orientation="Horizontal" HorizontalAlignment="Right" Background="{x:Null}">
+                <Button Margin="0, 0, 8, 0" x:Name="btn_refresh" Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="White" Click="Btn_refresh_Click">
+                    <materialDesign:PackIcon Kind="Refresh" Width="35" Height="35"/>
+                </Button>
+                <Button Margin="0, 0, 8, 0" x:Name="btn_alert" Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="White" Click="Btn_alert_Click">
+                    <materialDesign:PackIcon Kind="Notifications" Width="35" Height="35"/>
+                </Button>
+                <Button Margin="0, 0, 8, 0" x:Name="btn_exit" Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="White" Click="Btn_exit_Click">
+                    <materialDesign:PackIcon Kind="ExitToApp" Width="35" Height="35"/>
+                </Button>
+                <Button Margin="0, 0, 8, 0" x:Name="btn_close" Width="45" Height="45" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Foreground="White" Click="Btn_close_Click">
+                    <materialDesign:PackIcon Kind="Power"  Width="35" Height="35"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <Button x:Name="btn_IBSR" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn_IBSR_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="AlphaI" Height="60" Width="60" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="AlphaB" Height="60" Width="60" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="AlphaS" Height="60" Width="60" VerticalAlignment="Center"/>
+                            <materialDesign:PackIcon Kind="AlphaR" Height="60" Width="60" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel Background="#FF9DAEDC" Grid.Row="1">
+            <Button x:Name="btn_profile" Margin="10" Background="#FF5A73B8" BorderBrush="#FF3F61BF" Click="Btn_profile_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Account" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="24"/>
+                    <TextBlock Margin="10, 0, 0, 0" HorizontalAlignment="Center" Text="Profile" VerticalAlignment="Center" FontSize="18"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_groups" Margin="10" Background="#FF5A73B8" BorderBrush="#FF3F61BF" Click="Btn_groups_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Group" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="24"/>
+                    <TextBlock Margin="10, 0, 0, 0" HorizontalAlignment="Center" Text="Groups" VerticalAlignment="Center" FontSize="18"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_messages" Margin="10" Background="#FF5A73B8" BorderBrush="#FF3F61BF" Click="Btn_messages_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Message" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="24"/>
+                    <TextBlock Margin="10, 0, 0, 0" HorizontalAlignment="Center" Text="Messages" VerticalAlignment="Center" FontSize="18"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn_experiment" Margin="10" Background="#FF5A73B8" BorderBrush="#FF3F61BF" Click="Btn_experiment_Click">
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="Atom" HorizontalAlignment="Left" VerticalAlignment="Center" Height="24" Width="24"/>
+                    <TextBlock Margin="10, 0, 0, 0" HorizontalAlignment="Center" Text="Experiments" VerticalAlignment="Center" FontSize="18"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <Frame x:Name="main_frame" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

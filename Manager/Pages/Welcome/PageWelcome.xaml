@@ -1,0 +1,56 @@
+﻿<Page x:Class="IBSR_Manager_WPF.PageWelcome"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IBSR_Manager_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageWelcome">
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+
+        <Grid>
+            <Rectangle Fill="#FFDAD3D3" Height="800"/>
+            <TextBlock Text="Welcome to IBSR!" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Image Source="K:/IBSR_Manager_WPF/IBSR_Manager_WPF/Image/differentioation_in_sudbury_and_impacts_1_703.jpg" Height="150" Width="200" Margin="40, 70, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock FontSize="14" Margin="260, 70, 0, 0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <LineBreak/>
+                В местах падения на поверхность Земли астероидов и крупных метеоритов <LineBreak/>
+                образуются ударные кратеры, а энергия, выделяющаяся при таких событиях, <LineBreak/>
+                настолько велика, что породы внутри кратера плавятся, заполняя его <LineBreak/>
+                магматическим расплавом. <LineBreak/>
+                <LineBreak/>
+                Source: Elementy.ru
+            </TextBlock>
+            <Image Source="K:/IBSR_Manager_WPF/IBSR_Manager_WPF/Image/earth_and_moon_impact_flux_increased_logo_390.jpg" Height="150" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 260, 0, 0"/>
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14" Margin="260, 260, 0, 0">
+                Интенсивность метеоритной бомбардировки Земли резко <LineBreak/>
+                возросла в конце палеозоя <LineBreak/>
+                <LineBreak/>
+                <LineBreak/>
+                <LineBreak/>
+                Source: Elementy.ru
+            </TextBlock>
+            <Image Source="K:/IBSR_Manager_WPF/IBSR_Manager_WPF/Image/e82578fa1f8a9b.jpg" Height="150" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 440, 0, 0"/>
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14" Margin="260, 440, 0, 0">
+                Офис IBSR открылся в Новосибирске. Для жителей Новосибирска и близ<LineBreak/>
+                лежащих городов есть возможность моментально сменить место работы.<LineBreak/>
+                Заявку можно оставить в офисе у менеджеров или на нашем сайте.
+                <LineBreak/>
+                <LineBreak/>
+                <LineBreak/>
+                Source: ISFoundation.ru
+            </TextBlock>
+            <Image Source="K:/IBSR_Manager_WPF/IBSR_Manager_WPF/Image/deti-afriki-s-roditeliami-2.jpg" Height="150" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 620, 0, 0"/>
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14" Margin="260, 620, 0, 0">
+                В связи с критической ситуацией в африке наша компания решила<LineBreak/>
+                открыть фонд поддержки страдальцев. Доставка продовольствия,<LineBreak/>
+                одежды, постройка жилищ и колодцев все это запланировано на 2019 год.<LineBreak/>
+                <LineBreak/>
+                <LineBreak/>
+                <LineBreak/>
+                Source: ISFoundation.ru
+            </TextBlock>
+        </Grid>
+    </ScrollViewer>
+</Page>

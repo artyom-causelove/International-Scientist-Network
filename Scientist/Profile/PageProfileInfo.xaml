@@ -1,0 +1,50 @@
+﻿<Page x:Class="IBSR_Manager_WPF.Scientist.Profile.PageProfileInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IBSR_Manager_WPF.Scientist.Profile"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProfileInfo">
+
+    <Grid Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="240*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="120*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="140*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="250*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txt_name" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" FontFamily="Segoe UI" FontSize="15" FontWeight="Bold"/>
+        <Image VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="img_face" Grid.Column="1" Grid.Row="2" Margin="5" Stretch="Uniform"/>
+        <StackPanel Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="0, 10, 0, 0">
+            <TextBlock x:Name="txt_email" HorizontalAlignment="Left" FontFamily="Lucida Sans Unicode" FontSize="14"/>
+            <TextBlock x:Name="txt_age" Margin="0, 10, 0, 0" FontFamily="Lucida Sans Unicode" HorizontalAlignment="Left" FontSize="14"/>
+            <TextBox x:Name="password_box" Margin="0, 10, 0, 0"/>
+            <TextBlock x:Name="txt_status" Margin="0, 10, 0, 0" FontSize="20" Foreground="Green"/>
+        </StackPanel>
+        <Button Grid.Column="2" Grid.Row="3" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Btn_alterPassword_Click" x:Name="btn_alterPassword">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <materialDesign:PackIcon Kind="PasswordReset" VerticalAlignment="Center" Height="20" Width="20"/>
+                <TextBlock Text="Alter password" Margin="3" FontSize="13"/>
+            </StackPanel>
+        </Button>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Left" Click="Btn_selectPhoto_Click" x:Name="btn_selectPhoto" Grid.Column="1" Grid.Row="3" VerticalContentAlignment="Center">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <materialDesign:PackIcon Kind="Select" VerticalAlignment="Center" Height="20" Width="20"/>
+                <TextBlock Text="Select photo" Margin="3" FontSize="13"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>
