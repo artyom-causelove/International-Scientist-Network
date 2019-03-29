@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28234FD5-4F03-452E-801E-56D631026186}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IBSR_Manager_WPF</RootNamespace>
+    <AssemblyName>IBSR_Manager_WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\vectorpaint %281%29 %284%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Manager\Pages\Add\PageAdd.xaml.cs">
+      <DependentUpon>PageAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Add\PageAddEquipment.xaml.cs">
+      <DependentUpon>PageAddEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Add\PageAddExperiment.xaml.cs">
+      <DependentUpon>PageAddExperiment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Add\PageAddLabaratory.xaml.cs">
+      <DependentUpon>PageAddLabaratory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Add\PageAddManager.xaml.cs">
+      <DependentUpon>PageAddManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Add\PageAddScientist.xaml.cs">
+      <DependentUpon>PageAddScientist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Alter\PageAlter.xaml.cs">
+      <DependentUpon>PageAlter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Alter\PageAlterEquipment.xaml.cs">
+      <DependentUpon>PageAlterEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Alter\PageAlterExperiment.xaml.cs">
+      <DependentUpon>PageAlterExperiment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Alter\PageAlterLabaratory.xaml.cs">
+      <DependentUpon>PageAlterLabaratory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Delete\PageDelete.xaml.cs">
+      <DependentUpon>PageDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Delete\PageDeleteEquipment.xaml.cs">
+      <DependentUpon>PageDeleteEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Delete\PageDeleteExperiment.xaml.cs">
+      <DependentUpon>PageDeleteExperiment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Delete\PageDeleteLabaratory.xaml.cs">
+      <DependentUpon>PageDeleteLabaratory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Welcome\PageNewsAdd.xaml.cs">
+      <DependentUpon>PageNewsAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Welcome\PageNewsBrowse.xaml.cs">
+      <DependentUpon>PageNewsBrowse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Pages\Welcome\PageWelcomeAdd.xaml.cs">
+      <DependentUpon>PageWelcomeAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Experiments\PageExperiments.xaml.cs">
+      <DependentUpon>PageExperiments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Experiments\PageRecord.xaml.cs">
+      <DependentUpon>PageRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Groups\PageGroups.xaml.cs">
+      <DependentUpon>PageGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Messages\PageMessageList.xaml.cs">
+      <DependentUpon>PageMessageList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Notify\PageNotify.xaml.cs">
+      <DependentUpon>PageNotify.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Profile\PageProfileInfo.xaml.cs">
+      <DependentUpon>PageProfileInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\Welcome\PageWelcome.xaml.cs">
+      <DependentUpon>PageWelcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowLoad.xaml.cs">
+      <DependentUpon>WindowLoad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\WindowMenuMan.xaml.cs">
+      <DependentUpon>WindowMenuMan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Scientist\WindowMenuSci.xaml.cs">
+      <DependentUpon>WindowMenuSci.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IBSRHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IBSRHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Manager\Pages\Add\PageAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Add\PageAddEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Add\PageAddExperiment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Add\PageAddLabaratory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Add\PageAddManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Add\PageAddScientist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Alter\PageAlter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Alter\PageAlterEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Alter\PageAlterExperiment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Alter\PageAlterLabaratory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Delete\PageDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Delete\PageDeleteEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Delete\PageDeleteExperiment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Delete\PageDeleteLabaratory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Welcome\PageNewsAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Welcome\PageNewsBrowse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\Pages\Welcome\PageWelcomeAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Experiments\PageExperiments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Experiments\PageRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Groups\PageGroups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Messages\PageMessageList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Notify\PageNotify.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Profile\PageProfileInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\Welcome\PageWelcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowLoad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Manager\WindowMenuMan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientist\WindowMenuSci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="IBSRHDataSet.xsc">
+      <DependentUpon>IBSRHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="IBSRHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IBSRHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IBSRHDataSet.xss">
+      <DependentUpon>IBSRHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vectorpaint %281%29 %284%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\differentioation_in_sudbury_and_impacts_1_703.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\earth_and_moon_impact_flux_increased_logo_390.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\e82578fa1f8a9b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\deti-afriki-s-roditeliami-2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

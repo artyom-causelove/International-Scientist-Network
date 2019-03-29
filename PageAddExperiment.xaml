@@ -1,0 +1,32 @@
+﻿<Page x:Class="IBSR_Manager_WPF.PageAddExperiment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:IBSR_Manager_WPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAddExperiment">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FFDAD3D3" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Column="0">
+            <TextBlock Height="27" Margin="20" Text="Experiment title:" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock Height="27" Margin="20" Text="Start date:" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock Height="27" Margin="20" Text="End date:" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock Height="27" Margin="20" Text="Status:" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="statustxt" Text="" FontSize="25" Margin="20" Height="27" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox x:Name="exptitletxt" Height="27" Margin="20, 20, 40, 20" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="startdatetxt" Height="27" Margin="20, 20, 40, 20" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="enddatetxt" Height="27" Margin="20, 20, 40, 20" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="expstatustxt" Height="27" Margin="20, 20, 40, 20" VerticalContentAlignment="Center"/>
+            <Button x:Name="Add" Content="Add" Width="100" Click="Add_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
